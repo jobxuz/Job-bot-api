@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    /* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    height: 100vh;
+}
+
+/* Container holding both sidebar and main content */
+.container {
+    display: flex;
+    width: 100%;
+}
+
+/* Left sidebar styling */
+.sidebar {
+    width: 25%;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+
+.sidebar-header h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-menu li {
+    margin: 15px 0;
+}
+
+.sidebar-menu li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    display: block;
+    padding: 10px;
+    transition: background-color 0.3s;
+}
+
+.sidebar-menu li a:hover {
+    background-color: #444;
+}
+
+/* Main content area */
+.main-content {
+    width: 75%;
+    padding: 20px;
+    background-color: #f4f4f4;
+    overflow-y: auto;
+}
+
+/* Navbar styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #222;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+.navbar-left h2 {
+    margin: 0;
+}
+
+.navbar-right .user-status {
+    display: flex;
+}
+
+.navbar-right .user-status .btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 10px;
+    transition: background-color 0.3s;
+}
+
+.navbar-right .user-status .btn:hover {
+    background-color: #0056b3;
+}
+
+/* Dashboard content */
+.dashboard {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.dashboard h3 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.dashboard p {
+    font-size: 18px;
+}
+
+</style>
+<body>
+    <div class="container">
+        <!-- Left Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h2>Dashboard</h2>
+            </div>
+            <ul class="sidebar-menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Manage Users</a></li>
+                <li><a href="#">Manage Posts</a></li>
+                <li><a href="#">Settings</a></li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Navbar -->
+            <nav class="navbar">
+                <div class="navbar-left">
+                    <h2>Admin Panel</h2>
+                </div>
+                <div class="navbar-right">
+                    <!-- Conditional login/logout button -->
+                    <div class="user-status">
+                        <!-- Change this conditionally based on login status -->
+                        <button class="btn login-btn">Login</button>
+                        <!-- If user is logged in, change to -->
+                        <!-- <button class="btn logout-btn">Logout</button> -->
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Dashboard Content -->
+            <div class="dashboard">
+                <h3>Welcome to the Admin Panel</h3>
+                <p>Here you can manage your website data.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
